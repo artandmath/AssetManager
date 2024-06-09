@@ -66,6 +66,10 @@ ASSET_MANAGER_ENABLE_COLOR=""
 - Ground up re-write: using the Nuke panel Asset Manager prototype as a guide.
 - Hooks/extensible for non-core functionality. eg - color code spreadsheet trext (for versions), group via file/token, select DAG per grouping, contextual right-click options, version to latest, version to current, non-token spreadhseet columns, thumbnails, row highlighting for errored/missing files, toolbar for user button/dropdowns etc etc.
 
+## Special thanks
+- Thank you to Mitja Müller-Jend for his node_table panel for Nuke. Your code is some of the most readable I've ever encountered: https://gitlab.com/filmkorn/nuke_node_table
+- I apologize for basterdizing your wonderful code to hack together this prototype.
+
 ## Known issues with prototype
 - Any cell can be updated when we really only want to update items within one column.
 - For example, click a row, modify a cell, evey token is written and you've killed your asset.
@@ -73,7 +77,3 @@ ASSET_MANAGER_ENABLE_COLOR=""
 - Pieces of code from node_table are littered throughout the prototype. The comments in the code are from node_table, as such will be 90% incorrect.
 - Probably won't work with Microsoft Windows.
 - Won't work with url paths "smb://" etc 
-
-## Special thanks
-- Thank you to Mitja Müller-Jend for his node_table panel for Nuke. Your code is some of the most readable I've ever encountered: https://gitlab.com/filmkorn/nuke_node_table
-- I apologize for basterdizing your wonderful code to hack together this prototype.
