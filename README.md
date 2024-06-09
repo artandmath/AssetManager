@@ -3,18 +3,46 @@ Asset Manager is a panel for Nuke that pulls the assets (ie.e nodes that have a 
 > [!CAUTION]
 > Asset Manager is in a pre-release/protoype stage and is not intended for production use in its current state.
 
+## Installation
+
+Download Qt.py and add into your .nuke folder or PYTHON_PATH:
+https://github.com/mottosso/Qt.py
+
+Add to your menu.py:
+
+```python
+from nukescripts import panels
+
+def get_node_table_widget():
+    from node_table import view as node_table_view
+    return node_table_view.NodeTableWidget()
+
+
+panels.registerWidgetAsPanel(
+    'get_node_table_widget',
+    'Node Spreadsheet',
+    'de.filmkorn.NodeSpreadsheet',
+    False
+)
+```
+
 ## Project Goals
 - A schema syntax that can describe most VFX file-systems using a single string.
 - A library that can use that schema for file IO in any DCC.
-- Interoperable with OpenAsset IO
+- Interoperable with OpenAsset IO.
+- Work with filesystem if database has failed, or as a stepping stone to developing a database. And without breadcrumbs.
 - Asset Importer.
 - Asset Manager.
 - Solve/Desolve system.
-- Keep it simple. If we're looking to capture edge cases, we probably need to think whether that's the right way to do it.
+- Keep it simple. Simple enough for a non-VFX systems admin or technical artist to set up and manage.
+- If the project needs to capture edge cases, consider whether that's the right way to do it.
 
-## Investigstions
+## Investigations
 
-- SG Tank/Toolkit, Pyblish.
+- Shims between Asset Manager & SG Tank/Toolkit, Pyblish etc.
 
 ## Todo
-- Re-build from ground up— using the prototype project.
+- Re-build from ground up— using the nuke Asset Manager prototype as a guide.
+
+## Special thanks
+- Thank you to Mitja for his node_table panel for nuke, which is use as the inspiration for this codebase: https://gitlab.com/filmkorn/nuke_node_table
