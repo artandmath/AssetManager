@@ -70,4 +70,5 @@ ASSET_MANAGER_ENABLE_COLOR=""
 - Won't work with url paths "smb://" etc 
 
 ## Special thanks
-- Thank you to Mitja Müller-Jend for his node_table panel for Nuke, which is used as the inspiration for this codebase. Your code is some of the most readable I've ever encountered: https://gitlab.com/filmkorn/nuke_node_table
+- Thank you to Mitja Müller-Jend for his node_table panel for Nuke. Your code is some of the most readable I've ever encountered: https://gitlab.com/filmkorn/nuke_node_table
+- I apologize for basterdized it to hack together this prototype.
