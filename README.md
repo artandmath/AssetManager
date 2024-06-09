@@ -39,16 +39,18 @@ ASSET_MANAGER_ENABLE_OVERRIDE=""
 ASSET_MANAGER_ENABLE_COLOR=""
 ```
 
-## Project Goals
+## Project Goals/Principals
 - A schema syntax that can describe most VFX file-systems using a single string.
 - A library that can use that schema for file IO in any DCC.
 - Interoperable with OpenAsset IO.
-- Work with filesystem if database has failed, or as a stepping stone to developing a database. And without breadcrumbs.
+- Work with filesystem if the database has failed, or as a stepping stone to developing a database. Without any filesytem breadcrumbs.
+- Solve/Desolve system.
 - Asset Importer.
 - Asset Manager.
-- Solve/Desolve system.
 - Keep it simple. Simple enough for a non-VFX systems admin or technical artist to set up and manage.
 - If the project needs to capture edge cases, consider whether that's the right way to do it.
+- Always remain pipeline independant.
+- Filesystem level only. What is contained inside the files is outside the scope of the project.
 
 ## Investigations
 
