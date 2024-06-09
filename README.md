@@ -28,7 +28,9 @@ panels.registerWidgetAsPanel(
 )
 ```
 
-To disable color on the tokens and to disable the override add the following environment variables with empty stirngs:
+Open the example nukescript for further documentation.
+
+To disable color on the tokens and to disable the override field above the tokens, add the following environment variables with empty stirngs:
 
 ```bash
 #! /bin/bash
@@ -36,7 +38,6 @@ To disable color on the tokens and to disable the override add the following env
 ASSET_MANAGER_ENABLE_OVERRIDE=""
 ASSET_MANAGER_ENABLE_COLOR=""
 ```
-
 
 ## Project Goals
 - A schema syntax that can describe most VFX file-systems using a single string.
