@@ -66,6 +66,8 @@ ASSET_MANAGER_ENABLE_COLOR=""
 - For example, click a row, modify a cell, evey token is written and you've killed your asset.
 - Undo is performed with a sledgehammer. It's Apple Shake level stable.
 - Pieces of code from node_table are still littered in the prototype. The comments within the code will likely be incorrect.
+- Probably won't work with Microsoft Windows.
+- Won't work with url paths "smb://" etc 
 
 ## Special thanks
 - Thank you to Mitja Müller-Jend for his node_table panel for Nuke, which is used as the inspiration for this codebase. Your code is some of the most readable I've ever encountered: https://gitlab.com/filmkorn/nuke_node_table
