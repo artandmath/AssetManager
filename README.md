@@ -1,5 +1,5 @@
 # AssetManager
-Asset Manager is a panel for Nuke that pulls the assets (ie.e nodes that have a 'file' knob) into rows in a spreadsheet. The spreadsheet allows the modification of values which are in turn written back to the 'file' knob of the node. The spreadsheet columns are determined by a one line schema string of tokens that describes the structure of the file system.
+Asset Manager is a panel for Nuke that pulls the assets (ie.e nodes that have a 'file' knob) into rows in a spreadsheet. The spreadsheet allows the modification of values which are in turn written back to the 'file' knob of the node. The spreadsheet columns are determined by a one line schema string of tokens that describes the structure of the filesystem.
 > [!CAUTION]
 > Asset Manager is in a pre-release/protoype stage and is not intended for production use in its current state.
 
@@ -29,7 +29,7 @@ panels.registerWidgetAsPanel(
 ```
 Open AssetManager in Nuke from Windows:Custom:Asset Manager.
 
-Hover cursor over the first text field for syntax to build a schema that matches your file system.
+Hover cursor over the first text field for syntax to build a schema that matches your filesystem.
 
 Open the AssetManagerDemo.nk nukescript for syntax examples.
 
@@ -42,7 +42,7 @@ ASSET_MANAGER_ENABLE_COLOR=""
 ```
 
 ## Project Goals/Principals
-- A schema syntax that can describe _MOST_ VFX file systems schemas using a single line of text.
+- A schema syntax that can describe _MOST_ VFX filesystem schemas using a single line of text.
 - A library that can use that schema for file IO in any DCC.
 - Keep it simple. Simple enough for a non-VFX systems admin or technical artist to set up and manage, not so complicated that it requires a software developer or TD(s).
 - Interoperable with OpenAsset I.
