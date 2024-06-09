@@ -40,7 +40,7 @@ ASSET_MANAGER_ENABLE_COLOR=""
 ```
 
 ## Project Goals/Principals
-- A schema syntax that can describe **most** VFX file systems using a single string.
+- A schema syntax that can describe **most** VFX file systems schemas using a single string of text.
 - A library that can use that schema for file IO in any DCC.
 - Interoperable with OpenAsset IO.
 - Work with filesystem if the database has failed, or as a stepping stone to developing a database. Without any filesytem breadcrumbs.
