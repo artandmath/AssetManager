@@ -8,23 +8,35 @@ Asset Manager is a panel for Nuke that pulls the assets (ie.e nodes that have a 
 Download Qt.py and add into your .nuke folder or PYTHON_PATH:
 https://github.com/mottosso/Qt.py
 
+Download the AssetManager folder and add into your .nuke folder or PYTHON_PATH.
+
 Add to your menu.py:
 
 ```python
 from nukescripts import panels
 
-def get_node_table_widget():
-    from node_table import view as node_table_view
-    return node_table_view.NodeTableWidget()
-
+"""Asset Manager"""
+def getAssetManagerWidget():
+    from AssetManager import view as AssetManagerView
+    return AssetManagerView.AssetManagerWidget()
 
 panels.registerWidgetAsPanel(
-    'get_node_table_widget',
-    'Node Spreadsheet',
-    'de.filmkorn.NodeSpreadsheet',
+    'getAssetManagerWidget',
+    'Asset Manager',
+    'com.danielharkness.AssetManager',
     False
 )
 ```
+
+To disable color on the tokens and to disable the override add the following environment variables with empty stirngs:
+
+```bash
+#! /bin/bash
+#add these lines to your environment
+ASSET_MANAGER_ENABLE_OVERRIDE=""
+ASSET_MANAGER_ENABLE_COLOR=""
+```
+
 
 ## Project Goals
 - A schema syntax that can describe most VFX file-systems using a single string.
@@ -41,8 +53,13 @@ panels.registerWidgetAsPanel(
 
 - Shims between Asset Manager & SG Tank/Toolkit, Pyblish etc.
 
-## Todo
+## Todo - long term
+- Project roadmap
 - Re-build from ground up— using the nuke Asset Manager prototype as a guide.
+- Hooks for non-core functionality. eg - color code versions, group assets, version to latest, version to current etc.
+
+## Known issues with prototype
+- any cell will be updated
 
 ## Special thanks
 - Thank you to Mitja for his node_table panel for nuke, which is use as the inspiration for this codebase: https://gitlab.com/filmkorn/nuke_node_table
