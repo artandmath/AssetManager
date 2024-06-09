@@ -52,7 +52,7 @@ ASSET_MANAGER_ENABLE_COLOR=""
 - Asset Manager.
 - If the project needs to capture edge cases, consider whether that's the right way to do it.
 - Always remain pipeline independant.
-- Filesystem/Database level only. What is contained inside an asset/file is outside the scope of the project.
+- Filesystem/Database level only. Any item on disk for which Nuke has a node that contains a 'file' knob. What is contained inside an asset/file is outside the scope of the project.
 
 ## Investigations
 
