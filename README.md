@@ -51,9 +51,9 @@ ASSET_MANAGER_ENABLE_COLOR=""
 - Always remain pipeline independant.
 - Filesystem/Database level only. Any item on disk for which Nuke has a node that contains a 'file' knob. What is contained inside an asset/file is outside the scope of the project.
 - A UI suite:
--- Solve/Desolve system (Nuke)
--- Asset Importer (Nuke, possibly standalone)
--- Asset Manager (Nuke)
+ - Asset Manager (Nuke)
+ - Solve/Desolve system (Nuke)
+ - Asset Importer (Nuke, possibly standalone)
 
 ## Investigations
 
