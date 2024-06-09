@@ -56,13 +56,13 @@ ASSET_MANAGER_ENABLE_COLOR=""
 
 ## Investigations
 
-- Shims between Asset Manager & SG Tank/Toolkit, Pyblish etc.
+- Shims between Asset Manager & SG Tank/Toolkit, Pyblish etc
 
 ## Todo - long term
 - Revisit schema/token syntax, allow for some more flexibility and syntax that enables restrictions per token.
 - Project roadmap
 - Ground up re-write: using the Nuke panel Asset Manager prototype as a guide.
-- Hooks for non-core functionality. eg - color code versions, group via file/token etc, version to latest, version to current, non-token spreadhseet columns, thumbnails, row highlighting for errored/missing files etc etc.
+- Hooks for non-core functionality. eg - color code versions, group via file/token, contextual right-click, version to latest, version to current, non-token spreadhseet columns, thumbnails, row highlighting for errored/missing files etc etc.
 
 ## Known issues with prototype
 - Any cell can be updated when we really only want to update items within one column.
