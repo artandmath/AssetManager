@@ -47,12 +47,13 @@ ASSET_MANAGER_ENABLE_COLOR=""
 - Keep it simple. Simple enough for a technical artist or non-VFX admin to set up and manage, not so complicated that it requires a software developer or TD(s).
 - Interoperable with OpenAsset IO (probably as two lines of text, one for filesystem resolve, one for database resolve).
 - Work in filesystem only mode if the database has failed, or as a stepping stone to developing a database. And without any filesytem breadcrumbs.
-- Solve/Desolve system.
-- Asset Importer.
-- Asset Manager.
 - If the project needs to capture edge cases, consider whether that's the right way to do it.
 - Always remain pipeline independant.
 - Filesystem/Database level only. Any item on disk for which Nuke has a node that contains a 'file' knob. What is contained inside an asset/file is outside the scope of the project.
+- A UI suite:
+-- Solve/Desolve system (Nuke)
+-- Asset Importer (Nuke, possibly standalone)
+-- Asset Manager (Nuke)
 
 ## Investigations
 
