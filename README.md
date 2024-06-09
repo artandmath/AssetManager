@@ -58,7 +58,7 @@ ASSET_MANAGER_ENABLE_COLOR=""
 
 ## Todo - long term
 - Project roadmap
-- Re-build from ground up— using the nuke Asset Manager prototype as a guide.
+- Ground up re-write: using the Nuke panel Asset Manager prototype as a guide.
 - Hooks for non-core functionality. eg - color code versions, group assets, version to latest, version to current, non-token spreadhseet columns etc.
 
 ## Known issues with prototype
@@ -67,4 +67,4 @@ ASSET_MANAGER_ENABLE_COLOR=""
 - Pieces of code from node_table a still littered in the prototype. The comments within the code will likely be incorrect.
 
 ## Special thanks
-- Thank you to Mitja Müller-Jend for his node_table panel for nuke, which is use as the inspiration for this codebase. Your code is some of the most readable I've ever encountered: https://gitlab.com/filmkorn/nuke_node_table
+- Thank you to Mitja Müller-Jend for his node_table panel for Nuke, which is used as the inspiration for this codebase. Your code is some of the most readable I've ever encountered: https://gitlab.com/filmkorn/nuke_node_table
