@@ -50,7 +50,7 @@ ASSET_MANAGER_ENABLE_COLOR=""
 - Keep it simple. Simple enough for a non-VFX systems admin or technical artist to set up and manage.
 - If the project needs to capture edge cases, consider whether that's the right way to do it.
 - Always remain pipeline independant.
-- Filesystem/Database level only. The contents of files is outside the scope of the project.
+- Filesystem/Database level only. What is contained inside an asset/file is outside the scope of the project.
 
 ## Investigations
 
@@ -59,7 +59,7 @@ ASSET_MANAGER_ENABLE_COLOR=""
 ## Todo - long term
 - Project roadmap
 - Ground up re-write: using the Nuke panel Asset Manager prototype as a guide.
-- Hooks for non-core functionality. eg - color code versions, group via file/token etc, version to latest, version to current, non-token spreadhseet columns etc.
+- Hooks for non-core functionality. eg - color code versions, group via file/token etc, version to latest, version to current, non-token spreadhseet columns, thumbnails, row highlighting for errored/missing files etc etc.
 
 ## Known issues with prototype
 - Any cell can be updated when we really only want to update items within one column.
