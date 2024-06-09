@@ -56,7 +56,7 @@ ASSET_MANAGER_ENABLE_COLOR=""
 
 ## Investigations
 
-- Shims between Asset Manager & SG Tank/Toolkit, Pyblish etc
+- Shims between AssetManager & SG Tank/Toolkit, Pyblish etc
 
 ## Todo - long term
 - Revisit schema/token syntax, allow for some more flexibility and syntax that enables restrictions per token.
