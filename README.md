@@ -27,11 +27,11 @@ panels.registerWidgetAsPanel(
     False
 )
 ```
-Open AssetManager in Nuke from Windows:Custom:Asset Manager
+Open AssetManager in Nuke from Windows:Custom:Asset Manager.
 
-Hover cursor over the first text field for schema syntax.
+Hover cursor over the first text field for syntax to build a schema that matches your file system.
 
-Open the example nukescript for schema examples.
+Open the AssetManagerDemo.nk nukescript for syntax examples.
 
 To disable color on the tokens and to disable the override field above the tokens, add the following environment variables with empty stirngs:
 ```bash
