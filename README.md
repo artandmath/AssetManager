@@ -53,9 +53,9 @@ ASSET_MANAGER_ENABLE_COLOR=""
 - Artist first: outside of install and creating a token schema, if the UI requires reading the manual, it's too complicated. If the user needs to wait, indicate how long the task is going to take.
 - A suite of UI tools:
   - Asset solve/desolve system (Nuke)
-  - Asset Manager (Nuke)
-  - Maybe: Asset Importer (Nuke, possibly standalone)
-  - Maybe: Write Node (Nuke)
+  - AssetManager (Nuke)
+  - Maybe: AssetImporter (Nuke, possibly standalone)
+  - Maybe: WriteNode (Nuke)
 
 ## Investigations
 
