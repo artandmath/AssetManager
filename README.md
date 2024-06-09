@@ -74,4 +74,4 @@ ASSET_MANAGER_ENABLE_COLOR=""
 
 ## Special thanks
 - Thank you to Mitja Müller-Jend for his node_table panel for Nuke. Your code is some of the most readable I've ever encountered: https://gitlab.com/filmkorn/nuke_node_table
-- I apologize for basterdizing it to hack together this prototype.
+- I apologize for basterdizing your wonderful code to hack together this prototype.
