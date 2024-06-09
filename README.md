@@ -40,7 +40,7 @@ ASSET_MANAGER_ENABLE_COLOR=""
 ```
 
 ## Project Goals/Principals
-- A schema syntax that can describe most VFX file-systems using a single string.
+- A schema syntax that can describe **most** VFX file systems using a single string.
 - A library that can use that schema for file IO in any DCC.
 - Interoperable with OpenAsset IO.
 - Work with filesystem if the database has failed, or as a stepping stone to developing a database. Without any filesytem breadcrumbs.
@@ -59,7 +59,7 @@ ASSET_MANAGER_ENABLE_COLOR=""
 ## Todo - long term
 - Project roadmap
 - Ground up re-write: using the Nuke panel Asset Manager prototype as a guide.
-- Hooks for non-core functionality. eg - color code versions, group assets, version to latest, version to current, non-token spreadhseet columns etc.
+- Hooks for non-core functionality. eg - color code versions, group via file/token etc, version to latest, version to current, non-token spreadhseet columns etc.
 
 ## Known issues with prototype
 - Any cell can be updated when we really only want to update items within one column.
