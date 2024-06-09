@@ -45,8 +45,8 @@ ASSET_MANAGER_ENABLE_COLOR=""
 - A schema syntax that can describe _MOST_ VFX file systems schemas using a single line of text.
 - A library that can use that schema for file IO in any DCC.
 - Keep it simple. Simple enough for a non-VFX systems admin or technical artist to set up and manage, not so complicated that it requires a software developer or TD(s).
-- Interoperable with OpenAsset IO.
-- Work with filesystem if the database has failed, or as a stepping stone to developing a database. Without any filesytem breadcrumbs.
+- Interoperable with OpenAsset I.
+- Work in filesystem only mode if the database has failed, or as a stepping stone to developing a database. And without any filesytem breadcrumbs.
 - Solve/Desolve system.
 - Asset Importer.
 - Asset Manager.
