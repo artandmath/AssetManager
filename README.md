@@ -50,7 +50,7 @@ ASSET_MANAGER_ENABLE_COLOR=""
 - Keep it simple. Simple enough for a non-VFX systems admin or technical artist to set up and manage.
 - If the project needs to capture edge cases, consider whether that's the right way to do it.
 - Always remain pipeline independant.
-- Filesystem level only. The contents of files is outside the scope of the project.
+- Filesystem/Database level only. The contents of files is outside the scope of the project.
 
 ## Investigations
 
