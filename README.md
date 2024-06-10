@@ -41,8 +41,8 @@ ASSET_MANAGER_ENABLE_OVERRIDE=""
 ASSET_MANAGER_ENABLE_COLOR=""
 ```
 ## The problem
-- VFX work requires teams of artists working within a framework/workflow/pipeline— they must share work and work in a generally very similar fashion to achieve visiual consistency across a VFX project.
-- DCCs open up their API but leave the creation of a framework/workflow/pipeline to VFX studios.
+- VFX work requires teams of artists working within a framework/workflow/pipeline— they must share work and generally work in a similar fashion to one another to achieve visiual consistency across a VFX project.
+- DCCs open up their API but leave the creation of a framework/workflow/pipeline to VFX studios. On their own a DCC doesn't scale very well without custom tools that use the APIs.
 - Every studio will implement their framework/workflow/pipeline in a unique way.
 - The creation of a framework/workflow/pipeline is highly technical, requires on-going support and sophisticated tools are often out of reach for smaller studios due to costs involved.
 - AssetManager would seek to fill the niche of lowering the technical requirements of building a framework/workflow/pipeline that scales to hundreds of shots, flexability to fit within an existing workflow, or aid in migrating an existing workflow to a workflow that scales.
