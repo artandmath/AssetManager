@@ -72,7 +72,7 @@ ASSET_MANAGER_ENABLE_COLOR=""
 - Shims between AssetManager & SG Tank/Toolkit, Pyblish etc
 
 ## Todo - long term
-- Revisit schema/token syntax, allow for some more flexibility and syntax that enables restrictions per token, like enforcing case & token length etc. 
+- Revisit schema/token syntax, allow for some more flexibility and syntax that enables restrictions per token, like enforcing case & token length, fuzzy variables etc. 
 - Project roadmap
 - Ground up re-write: using the Nuke panel Asset Manager prototype as a guide.
 - Hooks/extensible for non-core functionality. eg - color code spreadsheet text (for color-coding versions), group via file/token, select DAG per grouping, contextual right-click options, version to latest, version to current, non-token spreadhseet columns, thumbnails, row highlighting for errored/missing files, toolbar for user button/dropdowns etc etc.
