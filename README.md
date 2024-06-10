@@ -49,7 +49,7 @@ ASSET_MANAGER_ENABLE_COLOR=""
 - DCCs open up their API but leave the creation of a framework/workflow/pipeline to VFX studios. On their own a DCC doesn't scale very well without custom tools that use the APIs.
 - Every studio will implement their framework/workflow/pipeline in a unique way.
 - The creation of a framework/workflow/pipeline is highly technical, requires on-going support and sophisticated tools are often out of reach for smaller studios due to costs involved.
-- AssetManager would seek to fill the niche of lowering the technical requirements of building a framework/workflow/pipeline that scales to hundreds of shots, flexability to fit within an existing workflow, or aid in migrating an existing workflow to a workflow that scales.
+- AssetManager would seek to fill the niche of lowering the technical requirements of building a framework/workflow/pipeline that scales to hundreds of shots and/or high asset count shots, flexability to fit within an existing workflow, or aid in migrating an existing workflow to a workflow that scales.
 
 ## Project Goals/Principals
 - A schema syntax that can describe _MOST_ VFX filesystem schemas using a single line of text.
