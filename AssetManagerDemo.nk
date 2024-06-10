@@ -1,0 +1,3168 @@
+#! /opt/Nuke13.2v9/libnuke-13.2.9.so -nx
+version 13.2 v9
+define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
+<layout version="1.0">
+    <window x="66" y="32" w="1589" h="835" maximized="1" screen="0">
+        <splitter orientation="1">
+            <split size="40"/>
+            <dock id="" hideTitles="1" activePageId="Toolbar.1">
+                <page id="Toolbar.1"/>
+            </dock>
+            <split size="926" stretch="1"/>
+            <splitter orientation="2">
+                <split size="465"/>
+                <dock id="" activePageId="com.danielharkness.AssetManager">
+                    <page id="Viewer.1"/>
+                    <page id="com.danielharkness.AssetManager"/>
+                </dock>
+                <split size="327"/>
+                <dock id="" activePageId="DAG.1">
+                    <page id="DAG.1"/>
+                    <page id="Curve Editor.1"/>
+                    <page id="DopeSheet.1"/>
+                </dock>
+            </splitter>
+            <split size="615"/>
+            <dock id="" activePageId="Properties.1">
+                <page id="Properties.1"/>
+                <page id="uk.co.thefoundry.backgroundrenderview.1"/>
+                <page id="uk.co.thefoundry.scripteditor.1"/>
+            </dock>
+        </splitter>
+    </window>
+</layout>
+}
+Root {
+ inputs 0
+ name /mnt/Shared/dev/AssetManagerDemo.nk
+ mapsize {0 0}
+ frame 1001
+ first_frame 1001
+ last_frame 1100
+ lock_range true
+ format "2048 1556 0 0 2048 1556 1 2K_Super_35(full-ap)"
+ proxy_type scale
+ proxy_format "1024 778 0 0 1024 778 1 1K_Super_35(full-ap)"
+ colorManagement Nuke
+ workingSpaceLUT linear
+ monitorLut sRGB
+ monitorOutLUT rec709
+ int8Lut sRGB
+ int16Lut sRGB
+ logLut Cineon
+ floatLut linear
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode1
+ tile_color 0x883c00ff
+ label "Example 1 & 2"
+ note_font_size 160
+ xpos -1618
+ ypos -582
+ appearance Border
+ bdwidth 4776
+ bdheight 3131
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol01_v002_wh/foo_bar_0080_precomp_laSprite_warhol01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read8
+ xpos 400
+ ypos -113
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol01_v002_wh/foo_bar_0080_precomp_laSprite_warhol01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read16
+ xpos 400
+ ypos 79
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol02_v002_wh/foo_bar_0080_precomp_laSprite_warhol02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read17
+ xpos 620
+ ypos 79
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_red_v002_wh/foo_bar_0080_precomp_laSprite_red_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read21
+ xpos -40
+ ypos 271
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_green_v001_wh/foo_bar_0080_precomp_laSprite_green_v001_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read22
+ xpos -920
+ ypos 271
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_noir_v002_wh/foo_bar_0080_precomp_laSprite_noir_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read23
+ xpos -1140
+ ypos 271
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_v002_wh/foo_bar_0080_precomp_laSprite_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read24
+ tile_color 0xff5f00ff
+ xpos 180
+ ypos 271
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol01_v002_wh/foo_bar_0080_precomp_laSprite_warhol01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read25
+ xpos 400
+ ypos 271
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol02_v002_wh/foo_bar_0080_precomp_laSprite_warhol02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read26
+ xpos 620
+ ypos 271
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych01_v002_wh/foo_bar_0080_precomp_laSprite_psych01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read27
+ xpos -700
+ ypos 271
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_purple_v002_wh/foo_bar_0080_precomp_laSprite_purple_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read28
+ tile_color 0xaa55ffff
+ xpos -260
+ ypos 463
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych02_v002_wh/foo_bar_0080_precomp_laSprite_psych02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read29
+ tile_color 0xaa55ffff
+ xpos -480
+ ypos 463
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_red_v002_wh/foo_bar_0080_precomp_laSprite_red_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read30
+ tile_color 0xaa55ffff
+ xpos -40
+ ypos 463
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_green_v001_wh/foo_bar_0080_precomp_laSprite_green_v001_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read31
+ tile_color 0xaa55ffff
+ xpos -920
+ ypos 463
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_noir_v002_wh/foo_bar_0080_precomp_laSprite_noir_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read32
+ tile_color 0xaa55ffff
+ xpos -1140
+ ypos 463
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_v002_wh/foo_bar_0080_precomp_laSprite_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read33
+ tile_color 0xff5f00ff
+ xpos 180
+ ypos 463
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol01_v002_wh/foo_bar_0080_precomp_laSprite_warhol01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read34
+ tile_color 0xaa55ffff
+ xpos 400
+ ypos 463
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol02_v002_wh/foo_bar_0080_precomp_laSprite_warhol02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read35
+ tile_color 0xaa55ffff
+ xpos 620
+ ypos 463
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych01_v002_wh/foo_bar_0080_precomp_laSprite_psych01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read36
+ tile_color 0xaa55ffff
+ xpos -700
+ ypos 463
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_purple_v002_wh/foo_bar_0080_precomp_laSprite_purple_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read37
+ xpos -260
+ ypos 655
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych02_v002_wh/foo_bar_0080_precomp_laSprite_psych02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read38
+ xpos -480
+ ypos 655
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_red_v002_wh/foo_bar_0080_precomp_laSprite_red_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read39
+ xpos -40
+ ypos 655
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_green_v001_wh/foo_bar_0080_precomp_laSprite_green_v001_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read40
+ xpos -920
+ ypos 655
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_noir_v002_wh/foo_bar_0080_precomp_laSprite_noir_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read41
+ xpos -1140
+ ypos 655
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_v002_wh/foo_bar_0080_precomp_laSprite_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read42
+ tile_color 0xff5f00ff
+ xpos 180
+ ypos 655
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol01_v002_wh/foo_bar_0080_precomp_laSprite_warhol01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read43
+ xpos 400
+ ypos 655
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol02_v002_wh/foo_bar_0080_precomp_laSprite_warhol02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read44
+ xpos 620
+ ypos 655
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych01_v002_wh/foo_bar_0080_precomp_laSprite_psych01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read45
+ xpos -700
+ ypos 655
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_purple_v002_wh/foo_bar_0080_precomp_laSprite_purple_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read46
+ xpos -260
+ ypos 847
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych02_v002_wh/foo_bar_0080_precomp_laSprite_psych02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read47
+ xpos -480
+ ypos 847
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_red_v002_wh/foo_bar_0080_precomp_laSprite_red_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read48
+ xpos -40
+ ypos 847
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_green_v001_wh/foo_bar_0080_precomp_laSprite_green_v001_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read49
+ xpos -920
+ ypos 847
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_noir_v002_wh/foo_bar_0080_precomp_laSprite_noir_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read50
+ xpos -1140
+ ypos 847
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_v002_wh/foo_bar_0080_precomp_laSprite_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read51
+ tile_color 0xff5f00ff
+ xpos 180
+ ypos 847
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol01_v002_wh/foo_bar_0080_precomp_laSprite_warhol01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read52
+ xpos 400
+ ypos 847
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol02_v002_wh/foo_bar_0080_precomp_laSprite_warhol02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read53
+ xpos 620
+ ypos 847
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych01_v002_wh/foo_bar_0080_precomp_laSprite_psych01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read54
+ xpos -700
+ ypos 847
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_purple_v002_wh/foo_bar_0080_precomp_laSprite_purple_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read55
+ tile_color 0xaaff55ff
+ xpos -260
+ ypos 1063
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_red_v002_wh/foo_bar_0080_precomp_laSprite_red_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read57
+ tile_color 0xaaff55ff
+ xpos -40
+ ypos 1063
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_green_v001_wh/foo_bar_0080_precomp_laSprite_green_v001_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read58
+ tile_color 0xaaff55ff
+ xpos -920
+ ypos 1063
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_noir_v002_wh/foo_bar_0080_precomp_laSprite_noir_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read59
+ tile_color 0xaaff55ff
+ xpos -1140
+ ypos 1063
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_v002_wh/foo_bar_0080_precomp_laSprite_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read60
+ tile_color 0xff5f00ff
+ xpos 180
+ ypos 1063
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol01_v002_wh/foo_bar_0080_precomp_laSprite_warhol01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read61
+ tile_color 0xaaff55ff
+ xpos 400
+ ypos 1063
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol02_v002_wh/foo_bar_0080_precomp_laSprite_warhol02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read62
+ tile_color 0xaaff55ff
+ xpos 620
+ ypos 1063
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych01_v002_wh/foo_bar_0080_precomp_laSprite_psych01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read63
+ tile_color 0xaaff55ff
+ xpos -700
+ ypos 1063
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_purple_v002_wh/foo_bar_0080_precomp_laSprite_purple_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read64
+ xpos -260
+ ypos 1255
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych02_v002_wh/foo_bar_0080_precomp_laSprite_psych02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read65
+ xpos -480
+ ypos 1255
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_red_v002_wh/foo_bar_0080_precomp_laSprite_red_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read66
+ xpos -40
+ ypos 1255
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_green_v001_wh/foo_bar_0080_precomp_laSprite_green_v001_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read67
+ xpos -920
+ ypos 1255
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_noir_v002_wh/foo_bar_0080_precomp_laSprite_noir_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read68
+ xpos -1140
+ ypos 1255
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_v002_wh/foo_bar_0080_precomp_laSprite_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read69
+ tile_color 0xff5f00ff
+ xpos 180
+ ypos 1255
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol01_v002_wh/foo_bar_0080_precomp_laSprite_warhol01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read70
+ xpos 400
+ ypos 1255
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol02_v002_wh/foo_bar_0080_precomp_laSprite_warhol02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read71
+ xpos 620
+ ypos 1255
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych01_v002_wh/foo_bar_0080_precomp_laSprite_psych01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read72
+ xpos -700
+ ypos 1255
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_purple_v002_wh/foo_bar_0080_precomp_laSprite_purple_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read73
+ xpos -260
+ ypos 1447
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych02_v002_wh/foo_bar_0080_precomp_laSprite_psych02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read74
+ xpos -480
+ ypos 1447
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_red_v002_wh/foo_bar_0080_precomp_laSprite_red_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read75
+ xpos -40
+ ypos 1447
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_green_v001_wh/foo_bar_0080_precomp_laSprite_green_v001_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read76
+ xpos -920
+ ypos 1447
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_noir_v002_wh/foo_bar_0080_precomp_laSprite_noir_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read77
+ xpos -1140
+ ypos 1447
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_v002_wh/foo_bar_0080_precomp_laSprite_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read78
+ tile_color 0xff5f00ff
+ xpos 180
+ ypos 1447
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol01_v002_wh/foo_bar_0080_precomp_laSprite_warhol01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read79
+ xpos 400
+ ypos 1447
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol02_v002_wh/foo_bar_0080_precomp_laSprite_warhol02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read80
+ xpos 620
+ ypos 1447
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych01_v002_wh/foo_bar_0080_precomp_laSprite_psych01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read81
+ xpos -700
+ ypos 1447
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_purple_v002_wh/foo_bar_0080_precomp_laSprite_purple_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read82
+ xpos -260
+ ypos 1639
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_red_v002_wh/foo_bar_0080_precomp_laSprite_red_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read84
+ xpos -40
+ ypos 1639
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_green_v001_wh/foo_bar_0080_precomp_laSprite_green_v001_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read85
+ xpos -920
+ ypos 1639
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_noir_v002_wh/foo_bar_0080_precomp_laSprite_noir_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read86
+ xpos -1140
+ ypos 1639
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_v002_wh/foo_bar_0080_precomp_laSprite_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read87
+ tile_color 0xff5f00ff
+ xpos 180
+ ypos 1639
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol01_v002_wh/foo_bar_0080_precomp_laSprite_warhol01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read88
+ xpos 400
+ ypos 1639
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol02_v002_wh/foo_bar_0080_precomp_laSprite_warhol02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read89
+ xpos 620
+ ypos 1639
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych01_v002_wh/foo_bar_0080_precomp_laSprite_psych01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read90
+ xpos -700
+ ypos 1639
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_purple_v002_wh/foo_bar_0080_precomp_laSprite_purple_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read91
+ xpos -260
+ ypos 1831
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_red_v002_wh/foo_bar_0080_precomp_laSprite_red_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read93
+ xpos -40
+ ypos 1831
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_green_v001_wh/foo_bar_0080_precomp_laSprite_green_v001_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read94
+ xpos -920
+ ypos 1831
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_noir_v002_wh/foo_bar_0080_precomp_laSprite_noir_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read95
+ xpos -1140
+ ypos 1831
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_v002_wh/foo_bar_0080_precomp_laSprite_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read96
+ tile_color 0xff5f00ff
+ xpos 180
+ ypos 1831
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol01_v002_wh/foo_bar_0080_precomp_laSprite_warhol01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read97
+ xpos 400
+ ypos 1831
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol02_v002_wh/foo_bar_0080_precomp_laSprite_warhol02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read98
+ xpos 620
+ ypos 1831
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych01_v002_wh/foo_bar_0080_precomp_laSprite_psych01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read99
+ xpos -700
+ ypos 1831
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych02_v002_wh/foo_bar_0080_precomp_laSprite_psych02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read101
+ xpos -480
+ ypos 2023
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol01_v002_wh/foo_bar_0080_precomp_laSprite_warhol01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read106
+ xpos 400
+ ypos 2023
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol02_v002_wh/foo_bar_0080_precomp_laSprite_warhol02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read107
+ xpos 620
+ ypos 2023
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych01_v002_wh/foo_bar_0080_precomp_laSprite_psych01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read108
+ xpos -700
+ ypos 2023
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_purple_v002_wh/foo_bar_0080_precomp_laSprite_purple_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read109
+ xpos 1720
+ ypos -113
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych02_v002_wh/foo_bar_0080_precomp_laSprite_psych02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read110
+ tile_color 0xff5594ff
+ xpos 1500
+ ypos -113
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_red_v002_wh/foo_bar_0080_precomp_laSprite_red_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read111
+ xpos 1940
+ ypos -113
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_green_v001_wh/foo_bar_0080_precomp_laSprite_green_v001_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read112
+ xpos 1060
+ ypos -113
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_noir_v002_wh/foo_bar_0080_precomp_laSprite_noir_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read113
+ xpos 840
+ ypos -113
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_v002_wh/foo_bar_0080_precomp_laSprite_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read114
+ xpos 2160
+ ypos -113
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol01_v002_wh/foo_bar_0080_precomp_laSprite_warhol01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read115
+ xpos 2380
+ ypos -113
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol02_v002_wh/foo_bar_0080_precomp_laSprite_warhol02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read116
+ xpos 2600
+ ypos -113
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych01_v002_wh/foo_bar_0080_precomp_laSprite_psych01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read117
+ xpos 1280
+ ypos -113
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_purple_v002_wh/foo_bar_0080_precomp_laSprite_purple_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read118
+ xpos 1720
+ ypos 79
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych02_v002_wh/foo_bar_0080_precomp_laSprite_psych02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read119
+ tile_color 0xff5594ff
+ xpos 1500
+ ypos 79
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_red_v002_wh/foo_bar_0080_precomp_laSprite_red_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read120
+ xpos 1940
+ ypos 79
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_green_v001_wh/foo_bar_0080_precomp_laSprite_green_v001_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read121
+ xpos 1060
+ ypos 79
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_noir_v002_wh/foo_bar_0080_precomp_laSprite_noir_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read122
+ xpos 840
+ ypos 79
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_v002_wh/foo_bar_0080_precomp_laSprite_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read123
+ xpos 2160
+ ypos 79
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol01_v002_wh/foo_bar_0080_precomp_laSprite_warhol01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read124
+ xpos 2380
+ ypos 79
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol02_v002_wh/foo_bar_0080_precomp_laSprite_warhol02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read125
+ xpos 2600
+ ypos 79
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych01_v002_wh/foo_bar_0080_precomp_laSprite_psych01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read126
+ xpos 1280
+ ypos 79
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_purple_v002_wh/foo_bar_0080_precomp_laSprite_purple_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read127
+ xpos 1720
+ ypos 271
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych02_v002_wh/foo_bar_0080_precomp_laSprite_psych02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read128
+ tile_color 0xff5594ff
+ xpos 1500
+ ypos 271
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_red_v002_wh/foo_bar_0080_precomp_laSprite_red_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read129
+ xpos 1940
+ ypos 271
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_green_v001_wh/foo_bar_0080_precomp_laSprite_green_v001_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read130
+ xpos 1060
+ ypos 271
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_noir_v002_wh/foo_bar_0080_precomp_laSprite_noir_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read131
+ xpos 840
+ ypos 271
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_v002_wh/foo_bar_0080_precomp_laSprite_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read132
+ xpos 2160
+ ypos 271
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol01_v002_wh/foo_bar_0080_precomp_laSprite_warhol01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read133
+ xpos 2380
+ ypos 271
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol02_v002_wh/foo_bar_0080_precomp_laSprite_warhol02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read134
+ xpos 2600
+ ypos 271
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych01_v002_wh/foo_bar_0080_precomp_laSprite_psych01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read135
+ xpos 1280
+ ypos 271
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_purple_v002_wh/foo_bar_0080_precomp_laSprite_purple_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read136
+ tile_color 0xaa55ffff
+ xpos 1720
+ ypos 463
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych02_v002_wh/foo_bar_0080_precomp_laSprite_psych02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read137
+ tile_color 0xff5594ff
+ xpos 1500
+ ypos 463
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_red_v002_wh/foo_bar_0080_precomp_laSprite_red_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read138
+ tile_color 0xaa55ffff
+ xpos 1940
+ ypos 463
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_green_v001_wh/foo_bar_0080_precomp_laSprite_green_v001_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read139
+ tile_color 0xaa55ffff
+ xpos 1060
+ ypos 463
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_noir_v002_wh/foo_bar_0080_precomp_laSprite_noir_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read140
+ tile_color 0xaa55ffff
+ xpos 840
+ ypos 463
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_v002_wh/foo_bar_0080_precomp_laSprite_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read141
+ tile_color 0xaa55ffff
+ xpos 2160
+ ypos 463
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol01_v002_wh/foo_bar_0080_precomp_laSprite_warhol01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read142
+ tile_color 0xaa55ffff
+ xpos 2380
+ ypos 463
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol02_v002_wh/foo_bar_0080_precomp_laSprite_warhol02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read143
+ tile_color 0xaa55ffff
+ xpos 2600
+ ypos 463
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych01_v002_wh/foo_bar_0080_precomp_laSprite_psych01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read144
+ tile_color 0xaa55ffff
+ xpos 1280
+ ypos 463
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_purple_v002_wh/foo_bar_0080_precomp_laSprite_purple_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read145
+ xpos 1720
+ ypos 655
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych02_v002_wh/foo_bar_0080_precomp_laSprite_psych02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read146
+ tile_color 0xff5594ff
+ xpos 1500
+ ypos 655
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_red_v002_wh/foo_bar_0080_precomp_laSprite_red_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read147
+ xpos 1940
+ ypos 655
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_green_v001_wh/foo_bar_0080_precomp_laSprite_green_v001_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read148
+ xpos 1060
+ ypos 655
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_noir_v002_wh/foo_bar_0080_precomp_laSprite_noir_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read149
+ xpos 840
+ ypos 655
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_v002_wh/foo_bar_0080_precomp_laSprite_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read150
+ xpos 2160
+ ypos 655
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol01_v002_wh/foo_bar_0080_precomp_laSprite_warhol01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read151
+ xpos 2380
+ ypos 655
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol02_v002_wh/foo_bar_0080_precomp_laSprite_warhol02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read152
+ xpos 2600
+ ypos 655
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych01_v002_wh/foo_bar_0080_precomp_laSprite_psych01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read153
+ xpos 1280
+ ypos 655
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_purple_v002_wh/foo_bar_0080_precomp_laSprite_purple_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read154
+ xpos 1720
+ ypos 847
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych02_v002_wh/foo_bar_0080_precomp_laSprite_psych02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read155
+ tile_color 0xff5594ff
+ xpos 1500
+ ypos 847
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_red_v002_wh/foo_bar_0080_precomp_laSprite_red_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read156
+ xpos 1940
+ ypos 847
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_green_v001_wh/foo_bar_0080_precomp_laSprite_green_v001_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read157
+ xpos 1060
+ ypos 847
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_noir_v002_wh/foo_bar_0080_precomp_laSprite_noir_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read158
+ xpos 840
+ ypos 847
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_v002_wh/foo_bar_0080_precomp_laSprite_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read159
+ xpos 2160
+ ypos 847
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol01_v002_wh/foo_bar_0080_precomp_laSprite_warhol01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read160
+ xpos 2380
+ ypos 847
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol02_v002_wh/foo_bar_0080_precomp_laSprite_warhol02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read161
+ xpos 2600
+ ypos 847
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych01_v002_wh/foo_bar_0080_precomp_laSprite_psych01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read162
+ xpos 1280
+ ypos 847
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_purple_v002_wh/foo_bar_0080_precomp_laSprite_purple_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read163
+ tile_color 0xaaff55ff
+ xpos 1720
+ ypos 1063
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych02_v002_wh/foo_bar_0080_precomp_laSprite_psych02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read164
+ tile_color 0xff5594ff
+ xpos 1500
+ ypos 1063
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_green_v001_wh/foo_bar_0080_precomp_laSprite_green_v001_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read166
+ tile_color 0xaaff55ff
+ xpos 1060
+ ypos 1063
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_noir_v002_wh/foo_bar_0080_precomp_laSprite_noir_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read167
+ tile_color 0xaaff55ff
+ xpos 840
+ ypos 1063
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_v002_wh/foo_bar_0080_precomp_laSprite_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read168
+ tile_color 0xaaff55ff
+ xpos 2160
+ ypos 1063
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol01_v002_wh/foo_bar_0080_precomp_laSprite_warhol01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read169
+ tile_color 0xaaff55ff
+ xpos 2380
+ ypos 1063
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol02_v002_wh/foo_bar_0080_precomp_laSprite_warhol02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read170
+ tile_color 0xaaff55ff
+ xpos 2600
+ ypos 1063
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych01_v002_wh/foo_bar_0080_precomp_laSprite_psych01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read171
+ tile_color 0xaaff55ff
+ xpos 1280
+ ypos 1063
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_purple_v002_wh/foo_bar_0080_precomp_laSprite_purple_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read172
+ xpos 1720
+ ypos 1255
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych02_v002_wh/foo_bar_0080_precomp_laSprite_psych02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read173
+ tile_color 0xff5594ff
+ xpos 1500
+ ypos 1255
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_red_v002_wh/foo_bar_0080_precomp_laSprite_red_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read174
+ xpos 1940
+ ypos 1255
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_green_v001_wh/foo_bar_0080_precomp_laSprite_green_v001_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read175
+ xpos 1060
+ ypos 1255
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_noir_v002_wh/foo_bar_0080_precomp_laSprite_noir_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read176
+ xpos 840
+ ypos 1255
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_v002_wh/foo_bar_0080_precomp_laSprite_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read177
+ xpos 2160
+ ypos 1255
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol01_v002_wh/foo_bar_0080_precomp_laSprite_warhol01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read178
+ xpos 2380
+ ypos 1255
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol02_v002_wh/foo_bar_0080_precomp_laSprite_warhol02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read179
+ xpos 2600
+ ypos 1255
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych01_v002_wh/foo_bar_0080_precomp_laSprite_psych01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read180
+ xpos 1280
+ ypos 1255
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_purple_v002_wh/foo_bar_0080_precomp_laSprite_purple_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read181
+ xpos 1720
+ ypos 1447
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych02_v002_wh/foo_bar_0080_precomp_laSprite_psych02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read182
+ tile_color 0xff5594ff
+ xpos 1500
+ ypos 1447
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_red_v002_wh/foo_bar_0080_precomp_laSprite_red_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read183
+ xpos 1940
+ ypos 1447
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_green_v001_wh/foo_bar_0080_precomp_laSprite_green_v001_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read184
+ xpos 1060
+ ypos 1447
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_noir_v002_wh/foo_bar_0080_precomp_laSprite_noir_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read185
+ xpos 840
+ ypos 1447
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_v002_wh/foo_bar_0080_precomp_laSprite_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read186
+ xpos 2160
+ ypos 1447
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol01_v002_wh/foo_bar_0080_precomp_laSprite_warhol01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read187
+ xpos 2380
+ ypos 1447
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol02_v002_wh/foo_bar_0080_precomp_laSprite_warhol02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read188
+ xpos 2600
+ ypos 1447
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych01_v002_wh/foo_bar_0080_precomp_laSprite_psych01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read189
+ xpos 1280
+ ypos 1447
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_purple_v002_wh/foo_bar_0080_precomp_laSprite_purple_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read190
+ xpos 1720
+ ypos 1639
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych02_v002_wh/foo_bar_0080_precomp_laSprite_psych02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read191
+ tile_color 0xff5594ff
+ xpos 1500
+ ypos 1639
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_red_v002_wh/foo_bar_0080_precomp_laSprite_red_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read192
+ xpos 1940
+ ypos 1639
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_green_v001_wh/foo_bar_0080_precomp_laSprite_green_v001_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read193
+ xpos 1060
+ ypos 1639
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_noir_v002_wh/foo_bar_0080_precomp_laSprite_noir_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read194
+ xpos 840
+ ypos 1639
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_v002_wh/foo_bar_0080_precomp_laSprite_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read195
+ xpos 2160
+ ypos 1639
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol01_v002_wh/foo_bar_0080_precomp_laSprite_warhol01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read196
+ xpos 2380
+ ypos 1639
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol02_v002_wh/foo_bar_0080_precomp_laSprite_warhol02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read197
+ xpos 2600
+ ypos 1639
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych01_v002_wh/foo_bar_0080_precomp_laSprite_psych01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read198
+ xpos 1280
+ ypos 1639
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_purple_v002_wh/foo_bar_0080_precomp_laSprite_purple_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read199
+ xpos 1720
+ ypos 1831
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych02_v002_wh/foo_bar_0080_precomp_laSprite_psych02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read200
+ tile_color 0xff5594ff
+ xpos 1500
+ ypos 1831
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_red_v002_wh/foo_bar_0080_precomp_laSprite_red_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read201
+ xpos 1940
+ ypos 1831
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_green_v001_wh/foo_bar_0080_precomp_laSprite_green_v001_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read202
+ xpos 1060
+ ypos 1831
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_noir_v002_wh/foo_bar_0080_precomp_laSprite_noir_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read203
+ xpos 840
+ ypos 1831
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_v002_wh/foo_bar_0080_precomp_laSprite_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read204
+ xpos 2160
+ ypos 1831
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol01_v002_wh/foo_bar_0080_precomp_laSprite_warhol01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read205
+ xpos 2380
+ ypos 1831
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol02_v002_wh/foo_bar_0080_precomp_laSprite_warhol02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read206
+ xpos 2600
+ ypos 1831
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych01_v002_wh/foo_bar_0080_precomp_laSprite_psych01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read207
+ xpos 1280
+ ypos 1831
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_purple_v002_wh/foo_bar_0080_precomp_laSprite_purple_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read208
+ xpos 1720
+ ypos 2023
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych02_v002_wh/foo_bar_0080_precomp_laSprite_psych02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read209
+ tile_color 0xff5594ff
+ xpos 1500
+ ypos 2023
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_red_v002_wh/foo_bar_0080_precomp_laSprite_red_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read210
+ xpos 1940
+ ypos 2023
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_green_v001_wh/foo_bar_0080_precomp_laSprite_green_v001_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read211
+ xpos 1060
+ ypos 2023
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_noir_v002_wh/foo_bar_0080_precomp_laSprite_noir_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read212
+ xpos 840
+ ypos 2023
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_v002_wh/foo_bar_0080_precomp_laSprite_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read213
+ xpos 2160
+ ypos 2023
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol01_v002_wh/foo_bar_0080_precomp_laSprite_warhol01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read214
+ xpos 2380
+ ypos 2023
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych01_v002_wh/foo_bar_0080_precomp_laSprite_psych01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read216
+ xpos 1280
+ ypos 2023
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych02_v002_wh/foo_bar_0080_precomp_laSprite_psych02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read56
+ tile_color 0xaaff55ff
+ xpos -480
+ ypos 1063
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych02_v002_wh/foo_bar_0080_precomp_laSprite_psych02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read83
+ xpos -480
+ ypos 1639
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych02_v002_wh/foo_bar_0080_precomp_laSprite_psych02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read92
+ xpos -480
+ ypos 1831
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_purple_v002_wh/foo_bar_0080_precomp_laSprite_purple_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read100
+ xpos -260
+ ypos 2023
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_red_v002_wh/foo_bar_0080_precomp_laSprite_red_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read165
+ tile_color 0xaaff55ff
+ xpos 1940
+ ypos 1063
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_v002_wh/foo_bar_0080_precomp_laSprite_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read105
+ tile_color 0xff5f00ff
+ xpos 180
+ ypos 2023
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_noir_v002_wh/foo_bar_0080_precomp_laSprite_noir_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read104
+ xpos -1140
+ ypos 2023
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_green_v001_wh/foo_bar_0080_precomp_laSprite_green_v001_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read103
+ xpos -920
+ ypos 2023
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_red_v002_wh/foo_bar_0080_precomp_laSprite_red_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read102
+ xpos -40
+ ypos 2023
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_v002_wh/foo_bar_0080_precomp_laSprite_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read7
+ tile_color 0xff5f00ff
+ xpos 180
+ ypos -113
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_red_v002_wh/foo_bar_0080_precomp_laSprite_red_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read6
+ xpos -40
+ ypos -113
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych02_v002_wh/foo_bar_0080_precomp_laSprite_psych02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read4
+ xpos -480
+ ypos -113
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_purple_v002_wh/foo_bar_0080_precomp_laSprite_purple_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read5
+ xpos -260
+ ypos -113
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol02_v002_wh/foo_bar_0080_precomp_laSprite_warhol02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read9
+ xpos 620
+ ypos -113
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_warhol02_v002_wh/foo_bar_0080_precomp_laSprite_warhol02_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read215
+ xpos 2600
+ ypos 2023
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_noir_v002_wh/foo_bar_0080_precomp_laSprite_noir_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read1
+ xpos -1140
+ ypos -113
+}
+Viewer {
+ frame_range 1001-1100
+ monitorOutOutputTransform rec709
+ name Viewer1
+ xpos 2614
+ ypos 3070
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych01_v002_wh/foo_bar_0080_precomp_laSprite_psych01_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read3
+ xpos -700
+ ypos -113
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_purple_v001_wh/foo_bar_0080_precomp_laSprite_purple_v001_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read10
+ xpos -260
+ ypos 79
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych02_V001_wh/foo_bar_0080_precomp_laSprite_psych02_V001_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read11
+ xpos -480
+ ypos 79
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_red_V001_wh/foo_bar_0080_precomp_laSprite_red_V001_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read12
+ xpos -40
+ ypos 79
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_green_v001_wh/foo_bar_0080_precomp_laSprite_green_v001_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read13
+ xpos -920
+ ypos 79
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_noir_V001_wh/foo_bar_0080_precomp_laSprite_noir_V001_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read14
+ xpos -1140
+ ypos 79
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_V001_wh/foo_bar_0080_precomp_laSprite_V001_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read15
+ tile_color 0xff5f00ff
+ xpos 180
+ ypos 79
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych01_V001_wh/foo_bar_0080_precomp_laSprite_psych01_V001_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read18
+ xpos -700
+ ypos 79
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_purple_V001_wh/foo_bar_0080_precomp_laSprite_purple_V001_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read19
+ xpos -260
+ ypos 271
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_green_v002_wh/foo_bar_0080_precomp_laSprite_green_v002_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read2
+ xpos -920
+ ypos -113
+}
+Read {
+ inputs 0
+ file_type exr
+ file /shows/foo/bar/0080/element/precomp/foo_bar_0080_precomp_laSprite_psych02_V001_wh/foo_bar_0080_precomp_laSprite_psych02_V001_wh.%04d.exr
+ format "1280 720 0 0 1280 720 1 HD_720"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read20
+ xpos -480
+ ypos 271
+}
+Input {
+ inputs 0
+ name Readme
+ tile_color 0xe9ff55ff
+ note_font_size 200
+ xpos -1638
+ ypos -986
+ number 1
+ addUserKnob {20 User}
+ addUserKnob {26 readme T "Example 1 & 2 are the same schema except the names of the tokens are different.\nOne favours abrieviated names full caps, the other, complete words, lowercase.\n\nCopy the schema from the examples and paste it into the text field\nat the top of the AssetManager panel.\n\nRe-load nodes into the spreadsheet."}
+ addUserKnob {43 example1 l "example 1" t "/shows/\{@show\}/\{@sequence\}/\{@shot\}/\{#product\}/\{@role\}/\{@show\}\{_@sequence\}\{_@shot\}\{_@role\}\{_@asset\}\{*_@variant\}\{_@version\}\{_@resolution\}/\{@show\}\{_@sequence\}\{_@shot\}\{_@role\}\{_@asset\}\{*_@variant\}\{_@version\}\{_@resolution\}\{*.#padding\}\{.#extension\}\n"}
+ example1 "/shows/\{@show\}/\{@sequence\}/\{@shot\}/\{#product\}/\{@role\}/\{@show\}\{_@sequence\}\{_@shot\}\{_@role\}\{_@asset\}\{*_@variant\}\{_@version\}\{_@resolution\}/\{@show\}\{_@sequence\}\{_@shot\}\{_@role\}\{_@asset\}\{*_@variant\}\{_@version\}\{_@resolution\}\{*.#padding\}\{.#extension\}\n"
+ addUserKnob {43 example2 l "example 2" t "/shows/\{@show\}/\{@sequence\}/\{@shot\}/\{#product\}/\{@role\}/\{@show\}\{_@sequence\}\{_@shot\}\{_@role\}\{_@asset\}\{*_@variant\}\{_@version\}\{_@resolution\}/\{@show\}\{_@sequence\}\{_@shot\}\{_@role\}\{_@asset\}\{*_@variant\}\{_@version\}\{_@resolution\}\{*.#padding\}\{.#extension\}\n"}
+ example2 "/shows/\{@SHOW\}/\{@SEQ\}/\{@SHOT\}/\{#TYPE\}/\{@ROLE\}/\{@SHOW\}\{_@SEQ\}\{_@SHOT\}\{_@ROLE\}\{_@ASSET\}\{*_@VAR\}\{_@VER\}\{_@RES\}/\{@SHOW\}\{_@SEQ\}\{_@SHOT\}\{_@ROLE\}\{_@ASSET\}\{*_@VAR\}\{_@VER\}\{_@RES\}\{*.#PAD\}\{.#EXT\}\n"
+}
