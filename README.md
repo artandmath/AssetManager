@@ -3,7 +3,7 @@ AssetManager is a panel for Nuke that pulls assets (i.e. any node class that has
 
 The AssetManager panel is a demonstration prototype and would be a part of a larger suite of tools and frameworks to address some pain points in VFX post production.
 > [!CAUTION]
-> The AssetManager is NOT intended for production use in its current state. USE IT AT YOUR OWN RISK!
+> AssetManager is NOT intended for production use in its current state. USE IT AT YOUR OWN RISK!
 
 ![AssetManager screenshot](AssetManagerScreenshot.png)
 
