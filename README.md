@@ -59,6 +59,7 @@ ASSET_MANAGER_ENABLE_COLOR=""
 - Work in filesystem only mode if the database has failed, or as a stepping stone to developing a database. And without any filesytem breadcrumbs. And because compositors will always find a way to pull data from the filesystem.
 - If the project needs to capture edge cases, consider whether that's the right way to do it.
 - Always remain pipeline independant.
+- Leave no proprietary code in nukescripts.
 - Filesystem/Database level only. Any item on disk for which Nuke has a node that contains a 'file' knob. What is contained inside an asset/file is outside the scope of the project.
 - Artist first: outside of install and creating a token schema, if the UI requires reading the manual, it's too complicated. If the user needs to wait, indicate how long the task is going to take.
 - A suite of UI tools:
