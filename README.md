@@ -64,7 +64,7 @@ ASSET_MANAGER_ENABLE_COLOR=""
 - A suite of UI tools:
   - Asset solve/desolve system (Nuke)
   - AssetManager (Nuke)
-  - Maybe: AssetImporter (Nuke, possibly standalone)
+  - Maybe: AssetImporter/Browser (Nuke, possibly standalone)
   - Maybe: WriteNode (Nuke)
 
 ## Investigations
