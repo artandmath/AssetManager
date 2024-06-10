@@ -81,7 +81,7 @@ ASSET_MANAGER_ENABLE_COLOR=""
 - Thank you to Mitja Müller-Jend for his node_table panel for Nuke. Your code is some of the most readable I've ever encountered: https://gitlab.com/filmkorn/nuke_node_table
 - I apologize for basterdizing your wonderful code to hack together this prototype.
 
-## Known issues with prototype
+## Known issues with the prototype
 - Any cell can be updated when we really only want to update items within one column.
 - For example, click a row, modify a cell, evey token is written and you've killed your asset.
 - Undo is performed with a sledgehammer. It's Apple Shake-level stable.
