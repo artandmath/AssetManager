@@ -5,6 +5,8 @@ The AssetManager panel is a demonstration prototype and would be a part of a lar
 > [!CAUTION]
 > The AssetManager protoype and not intended for production use in its current state. USE IT AT YOUR OWN RISK!
 
+[!AssetManagerScreenshot.png]
+
 ## Installation
 
 Download Qt.py and add into your .nuke folder or PYTHON_PATH:
