@@ -85,6 +85,6 @@ ASSET_MANAGER_ENABLE_COLOR=""
 - Any cell can be updated when we really only want to update items within one column.
 - For example, click a row, modify a cell, evey token is written and you've killed your asset.
 - Undo is performed with a sledgehammer. It's Apple Shake-level stable.
-- Pieces of code from node_table are littered throughout the prototype. The comments in the code are from node_table, as such will be 90% incorrect.
+- Pieces of code from node_table are littered throughout the prototype. The comments in the code are from node_table, as such the comments are unlikely to relate to surrounding code.
 - Probably won't work with Microsoft Windows.
 - Won't work with url paths "smb://" etc 
