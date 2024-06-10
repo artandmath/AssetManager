@@ -1,7 +1,7 @@
 # AssetManager
 AssetManager is a panel for Nuke that pulls assets (i.e. any node class that has a 'file' knob) into rows in a spreadsheet. The spreadsheet allows the modification of values which are in turn written back to the 'file' knob of the node. The spreadsheet columns are determined by a one line string of tokens that describes the structure of the filesystem.
 
-The AssetManager panel is a demonstration prototype and would be a part of a larger suite of tools and frameworks to address some pain points in VFX post production.
+The AssetManager panel is a demonstration prototype and would be a part of a larger suite of tools and frameworks that address pain points in VFX post production.
 > [!CAUTION]
 > AssetManager is NOT intended for production use in its current state. USE IT AT YOUR OWN RISK!
 
