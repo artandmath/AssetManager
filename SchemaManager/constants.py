@@ -15,7 +15,7 @@ match SCHEMA_STYLE:
         DELIMETERS = ['/', '_', '.']
         TOKEN_KEY_MATCH = r'^[a-zA-Z0-9.]+$'
         TOKEN_VALUE_MAP = r'^[a-zA-Z0-9-]+$'
-        ALLOW_MULTIDELIMITED_TOKEN = True
+        ALLOW_MULTIDELIMITED_TOKEN = False
 
     case 1:
         # Style: lowercase alphanumeric and '-' allowed in token values
