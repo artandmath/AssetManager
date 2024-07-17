@@ -1,10 +1,10 @@
 SchemaManager
 
-SchemaManager will be basis upon which suite of tools will be bult.
-First look to see wether SchemaManager is possible.
+SchemaManager will be basis upon which suite of tools will be built.
+First look to see whether SchemaManager is possible.
 Captures many VFX filesystems, but not enough just yet. Next re-write should capture them 🤞🤞
 
-
+Shorthand notes:
 Usage:
 - convert the schema string to UNIX style path delimeters
 - rip out the anchor
