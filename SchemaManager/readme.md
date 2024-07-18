@@ -23,5 +23,7 @@ Todo:
 
 Test strings for app_qt:
 
-//jobs.local/sharename/shows/{@show}{/@sequence}{/@shot}/{#product}{/@role}{?/@user}{/@show}{_@sequence}{_@shot}{_@role}{_@asset}{?_@variant}{_@version[v3_2]}{_@resolution}{/@show}{_@sequence}{_@shot}{_@role}{_@asset}{?_@variant}{_@version[v3_2]}{_@resolution}{?.#padding}{.#extension}
-
+'//jobs.local/sharename/shows\
+{/@show}{/@episode}{/@sequence}{/@shot}/{#product}{/@role}{/@task}{?/@user}\
+{/@show}{_@episode}{_@sequence}{_@shot}{_@role}{_@task}{_@asset}{?_@variant}{_@version[v3]}{_@resolution}\
+{/@show}{_@episode}{_@sequence}{_@shot}{_@role}{_@task}{_@asset}{?_@variant}{_@version[v3]}{_@resolution}{?.#padding}{.#extension}'
