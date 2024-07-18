@@ -14,7 +14,7 @@ Usage:
 
 Todo:
 - still first look
-- allow multi level optionals, notably for pipelines that account for userspace and often use 2 levels of path depth
+- allow multi level optionals, notably for pipelines that account for userspace and often use 2 optional levels of path depth
 - rework again to reduce repetition in code
 - version inspection
 - allow for major/minor versioning variants
